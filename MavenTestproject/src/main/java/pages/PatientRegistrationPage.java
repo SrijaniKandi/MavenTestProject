@@ -17,6 +17,7 @@ public class PatientRegistrationPage extends AbstractPage{
 	
 	public void doEnterPatientDetails()
 	{
+		log.info("Hi");
 		txtFirstName.sendKeys("abc");
 		txtLastName.sendKeys("xyz");
 		btnConfirm.click();
