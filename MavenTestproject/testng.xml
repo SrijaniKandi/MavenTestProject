@@ -3,7 +3,8 @@
 <suite name="Practice">
  <test name="Test1">
      <classes>
-       <class name="PatientRegistrationTest"/>
+       <class name="tests.LoginTest"/>
+       <class name="tests.PatientRegistrationTest"/>
      </classes>
  </test><!-- Test -->
 </suite><!-- Test -->

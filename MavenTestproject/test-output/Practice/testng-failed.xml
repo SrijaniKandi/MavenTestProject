@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Practice]">
+  <test name="Test1(failed)" parallel="classes">
+    <classes>
+      <class name="test.LoginTest">
+        <methods>
+          <include name="before"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+      <class name="test.PatientRegistrationTest">
+        <methods>
+          <include name="before"/>
+          <include name="verifyPatentRegistration"/>
+          <include name="getResult"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- test.PatientRegistrationTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Practice] -->

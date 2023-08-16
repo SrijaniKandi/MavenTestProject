@@ -1,12 +1,14 @@
 package pages;
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class PatientRegistrationPage extends AbstractPage{
 
-	public PatientRegistrationPage(WebDriver driver) {
+	public PatientRegistrationPage(WebDriver driver) throws MalformedURLException {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}

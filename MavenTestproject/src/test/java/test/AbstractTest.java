@@ -14,6 +14,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import java.lang.*;
+import java.net.MalformedURLException;
 
 import pages.AbstractPage;
 import pages.LoginPage;
@@ -23,7 +24,7 @@ public class AbstractTest extends SeleniumTest{
 	
 	public static LoginPage login;
 
-	public void beforeClazz(Class<?> testClass)
+	public void beforeClazz(Class<?> testClass) throws MalformedURLException
 	{
 		System.out.println("TestClass is"+testClass.getSimpleName());
 		String testName = testClass.getSimpleName();

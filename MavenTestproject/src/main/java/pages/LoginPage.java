@@ -1,5 +1,10 @@
 package pages;
 
+import java.net.MalformedURLException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,13 +22,25 @@ public class LoginPage extends AbstractPageBase{
 	protected @FindBy(xpath="//*[@id='password']") WebElement fldPassword;
 	protected @FindBy(xpath="//*[@id='loginButton']") WebElement btnLogin;
 	protected @FindBy(id="Registration Desk") WebElement lnkRegistrationDesk;
+	protected @FindBy(xpath="//*[@id='hi']") WebElement fldFake;
 	
-	public LoginPage(boolean initDriver)
+	public LoginPage(boolean initDriver) throws MalformedURLException
 	{
 		super(initDriver);
-		//System.out.println(this.driver);
-		log.info("Initializing driver");
-
+		System.out.println(this.driver);
+//		log.info("Initializing driver");
+//        
+		List<String> names = Arrays.asList(
+	            "Reflection", "Collection", "Stream");
+		List<String> show = names.stream().filter(x -> x.endsWith("n")).collect(Collectors.toList());
+//		
+		List<Double> number = Arrays.asList(2.0, 3.0, 4.0, 5.0);
+		List<Double> show2 = number.stream().map(x -> x.doubleValue()).collect(Collectors.toList());
+  
+		//List<String> show3 = names.stream().map(x -> x.toUpperCase()).collect();
+		//number.stream().filt
+		
+		names.stream().forEach(x -> System.out.println(x.toLowerCase()));
 	}
 	
 	public void goLoginPage()
@@ -42,6 +59,7 @@ public class LoginPage extends AbstractPageBase{
 		takeScreenshot(driver,"img");
 		lnkRegistrationDesk.click();
 		btnLogin.click();
+		//externalWait2(fldFake);
 		return new RegistrationDeskPage(driver);
 	}
 
