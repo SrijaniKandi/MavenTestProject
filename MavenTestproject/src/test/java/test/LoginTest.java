@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.RegistrationDeskPage;
 
+//@RunWith(JUnit4.class)
+//Incorporated new line in branch kandi
 public class LoginTest extends AbstractTest{
 	
 	protected WebDriver driver;
